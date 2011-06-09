@@ -5,11 +5,13 @@
   <title>Logos for RDF Formats</title>
   <style>
 body { font-family: Georgia; text-align: center; }
+p { font-size: 120%; line-height: 1.3em; }
 h1, h2 { color: #0C479C; font-family: Verdana; }
-h1 { font-size: 300%; }
+h1 { font-size: 300%; text-shadow: 2px 2px 6px #bbb; }
 h2 { font-size: 200%; font-weight: normal; margin: 1.5em 0 0.4em; }
 .logos { margin: 0; padding: 0; }
 .logos li { display: inline; }
+img.deri { box-shadow: 2px 2px 6px #bbb; -moz-box-shadow: 2px 2px 6px #bbb; -webkit-box-shadow: 2px 2px 6px #bbb; }
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
   <script>
@@ -30,7 +32,7 @@ $(document).ready(function() {
     <p>These icons were made by <a href="http://richard.cyganiak.de/">Richard Cyganiak</a><br>
       based on <a href="http://www.w3.org/RDF/icons/">Bill Schwappacher's original RDF logo</a>.</p>
 
-    <p><a href="http://linkeddata.deri.ie/"><img src="deri-logo-100px.png" alt="DERI Galway"></a></p>
+    <p><a href="http://linkeddata.deri.ie/"><img class="deri" src="deri-logo-100px.png" alt="DERI Galway"></a></p>
 
     <h2>128x128 Pixel</h2>
     <p class=logos>
@@ -92,5 +94,7 @@ $(document).ready(function() {
       <a href="svg/rdfa.svg"><img src="svg/rdfa.svg" height=48 width=48 alt="RDFa logo"></a>
       <a href="svg/sparql.svg"><img src="svg/sparql.svg" height=48 width=48 alt="SPARQL logo"></a>
     </p>
+
+<a href="http://github.com/cygri/rdf-logos/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://d3nwyuy0nl342s.cloudfront.net/img/71eeaab9d563c2b3c590319b398dd35683265e85/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub"></a>
   </body>
 </html>
