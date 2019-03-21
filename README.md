@@ -6,4 +6,5 @@ from the SVGs. This requires a copy of Apache Batik.
 Original logos are by Bill Schwappacher:
 http://www.w3.org/RDF/icons/
 
-I added different text and tweaked the SVG to be square.
+I added different text, tweaked the SVG to be square, and cleaned up
+the SVG a bit.
