@@ -7,7 +7,7 @@ if ARGV.length != 1 then
 end
 batik_path = ARGV[0]
 Dir['svg/*.svg'].each do |file|
-    [40,48,64,96,128].each do |size|
+    [40,48,64,96,128,256].each do |size|
         outfile = /svg\/(.*).svg/.match(file)[1] + "-#{size}.png"
         cmd = "java -jar #{batik_path}/batik-rasterizer*.jar -w #{size} -h #{size} -d png/#{outfile} #{file}"
         system cmd

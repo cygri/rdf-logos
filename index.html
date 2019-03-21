@@ -4,23 +4,27 @@
   <meta charset=utf-8>
   <title>Logos for RDF Formats (RDF/XML, Turtle, RDFa, SPARQL, R2RML, SHACL)</title>
   <style>
-body { font-family: Georgia; text-align: center; }
+body { font-family: Georgia; text-align: center; background: #f0f6ff; }
 p { font-size: 120%; line-height: 1.3em; }
 h1, h2 { color: #0C479C; font-family: "Trebuchet MS", sans-serif; }
 h1 { font-size: 300%; text-shadow: 2px 2px 6px #bbb; }
 h2 { font-size: 200%; font-weight: normal; margin: 1.5em 0 0.4em; }
 .logos { margin: 0; padding: 0; }
 .logos li { display: inline; }
-img.deri { box-shadow: 2px 2px 6px #bbb; -moz-box-shadow: 2px 2px 6px #bbb; -webkit-box-shadow: 2px 2px 6px #bbb; }
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
   <script>
 $(document).ready(function() {
   $('#size').change(function() {
-    $('.logos.svg img').height(this.value);
-    $('.logos.svg img').width(this.value);
+    $('.logos.svg img').width(this.value / window.devicePixelRatio);
     $('.size').text(this.value);
-  });
+  }).val(64 * window.devicePixelRatio).change();
+  if (window.devicePixelRatio > 1) {
+    $('.logos:not(.svg) img').load(function() {
+      var img = $(this);
+      img.width(img.width() / window.devicePixelRatio);
+    });
+  }
 });
   </script>
   </head>
@@ -39,52 +43,17 @@ $(document).ready(function() {
       <a href="http://www.w3.org/RDF/icons/">Bill Schwappacher's original RDF logo</a><br>
       by <a href="http://richard.cyganiak.de/">Richard Cyganiak</a>.</p>
 
-    <h2>128x128 Pixel (PNG)</h2>
-    <p class=logos>
-      <a href="png/rdf-128.png"><img src="png/rdf-128.png" alt="Resource Description Format (RDF) logo"></a>
-      <a href="png/rdf-xml-128.png"><img src="png/rdf-xml-128.png" alt="RDF/XML logo"></a>
-      <a href="png/turtle-128.png"><img src="png/turtle-128.png" alt="RDF/Turtle logo"></a>
-      <a href="png/n-triple-128.png"><img src="png/n-triple-128.png" alt="RDF N-Triples logo"></a>
-      <a href="png/rdfa-128.png"><img src="png/rdfa-128.png" alt="RDFa logo"></a>
-      <a href="png/sparql-128.png"><img src="png/sparql-128.png" alt="SPARQL logo"></a>
-      <a href="png/r2rml-128.png"><img src="png/r2rml-128.png" alt="R2RML logo"></a>
-      <a href="png/shacl-128.png"><img src="png/shacl-128.png" alt="SHACL logo"></a>
-    </p>
-
-    <h2>96x96 Pixel (PNG)</h2>
-    <p class=logos>
-      <a href="png/rdf-96.png"><img src="png/rdf-96.png" alt="Resource Description Format (RDF) logo"></a>
-      <a href="png/rdf-xml-96.png"><img src="png/rdf-xml-96.png" alt="RDF/XML logo"></a>
-      <a href="png/turtle-96.png"><img src="png/turtle-96.png" alt="RDF/Turtle logo"></a>
-      <a href="png/n-triple-96.png"><img src="png/n-triple-96.png" alt="RDF N-Triples logo"></a>
-      <a href="png/rdfa-96.png"><img src="png/rdfa-96.png" alt="RDFa logo"></a>
-      <a href="png/sparql-96.png"><img src="png/sparql-96.png" alt="SPARQL logo"></a>
-      <a href="png/r2rml-96.png"><img src="png/r2rml-96.png" alt="R2RML logo"></a>
-      <a href="png/shacl-96.png"><img src="png/shacl-96.png" alt="SHACL logo"></a>
-    </p>
-
-    <h2>64x64 Pixel (PNG)</h2>
-    <p class=logos>
-      <a href="png/rdf-64.png"><img src="png/rdf-64.png" alt="Resource Description Format (RDF) logo"></a>
-      <a href="png/rdf-xml-64.png"><img src="png/rdf-xml-64.png" alt="RDF/XML logo"></a>
-      <a href="png/turtle-64.png"><img src="png/turtle-64.png" alt="RDF/Turtle logo"></a>
-      <a href="png/n-triple-64.png"><img src="png/n-triple-64.png" alt="RDF N-Triples logo"></a>
-      <a href="png/rdfa-64.png"><img src="png/rdfa-64.png" alt="RDFa logo"></a>
-      <a href="png/sparql-64.png"><img src="png/sparql-64.png" alt="SPARQL logo"></a>
-      <a href="png/r2rml-64.png"><img src="png/r2rml-64.png" alt="R2RML logo"></a>
-      <a href="png/shacl-64.png"><img src="png/shacl-64.png" alt="SHACL logo"></a>
-    </p>
-
-    <h2>48x48 Pixel (PNG)</h2>
-    <p class=logos>
-      <a href="png/rdf-48.png"><img src="png/rdf-48.png" alt="Resource Description Format (RDF) logo"></a>
-      <a href="png/rdf-xml-48.png"><img src="png/rdf-xml-48.png" alt="RDF/XML logo"></a>
-      <a href="png/turtle-48.png"><img src="png/turtle-48.png" alt="RDF/Turtle logo"></a>
-      <a href="png/n-triple-48.png"><img src="png/n-triple-48.png" alt="RDF N-Triples logo"></a>
-      <a href="png/rdfa-48.png"><img src="png/rdfa-48.png" alt="RDFa logo"></a>
-      <a href="png/sparql-48.png"><img src="png/sparql-48.png" alt="SPARQL logo"></a>
-      <a href="png/r2rml-48.png"><img src="png/r2rml-48.png" alt="R2RML logo"></a>
-      <a href="png/shacl-48.png"><img src="png/shacl-48.png" alt="SHACL logo"></a>
+    <h2>Scalable (SVG)</h2>
+    <p><input id=size type=range min=16 max=300 step=4 style="width: 25em"> <span class="size"></span></p>
+    <p class="svg logos">
+      <a href="svg/rdf.svg"><img src="svg/rdf.svg" alt="Resource Description Framework (RDF) logo"></a>
+      <a href="svg/rdf-xml.svg"><img src="svg/rdf-xml.svg" alt="RDF/XML logo"></a>
+      <a href="svg/turtle.svg"><img src="svg/turtle.svg" alt="RDF/Turtle logo"></a><br>
+      <a href="svg/n-triple.svg"><img src="svg/n-triple.svg" alt="RDF N-Triples logo"></a>
+      <a href="svg/rdfa.svg"><img src="svg/rdfa.svg" alt="RDFa logo"></a>
+      <a href="svg/sparql.svg"><img src="svg/sparql.svg" alt="SPARQL logo"></a><br>
+      <a href="svg/r2rml.svg"><img src="svg/r2rml.svg" alt="R2RML logo"></a>
+      <a href="svg/shacl.svg"><img src="svg/shacl.svg" alt="SHACL logo"></a>
     </p>
 
     <h2>40x40 Pixel (PNG)</h2>
@@ -99,17 +68,64 @@ $(document).ready(function() {
       <a href="png/shacl-40.png"><img src="png/shacl-40.png" alt="SHACL logo"></a>
     </p>
 
-    <h2>Scalable (SVG)</h2>
-    <p><input id=size type=range min=16 max=300 step=4 value=48 style="width: 25em"> <span class="size">48</span></p>
-    <p class="svg logos">
-      <a href="svg/rdf.svg"><img src="svg/rdf.svg" height=48 width=48 alt="Resource Description Framework (RDF) logo"></a>
-      <a href="svg/rdf-xml.svg"><img src="svg/rdf-xml.svg" height=48 width=48 alt="RDF/XML logo"></a>
-      <a href="svg/turtle.svg"><img src="svg/turtle.svg" height=48 width=48 alt="RDF/Turtle logo"></a><br>
-      <a href="svg/n-triple.svg"><img src="svg/n-triple.svg" height=48 width=48 alt="RDF N-Triples logo"></a>
-      <a href="svg/rdfa.svg"><img src="svg/rdfa.svg" height=48 width=48 alt="RDFa logo"></a>
-      <a href="svg/sparql.svg"><img src="svg/sparql.svg" height=48 width=48 alt="SPARQL logo"></a><br>
-      <a href="svg/r2rml.svg"><img src="svg/r2rml.svg" height=48 width=48 alt="R2RML logo"></a>
-      <a href="svg/shacl.svg"><img src="svg/shacl.svg" height=48 width=48 alt="SHACL logo"></a>
+    <h2>48x48 Pixel (PNG)</h2>
+    <p class=logos>
+      <a href="png/rdf-48.png"><img src="png/rdf-48.png" alt="Resource Description Format (RDF) logo"></a>
+      <a href="png/rdf-xml-48.png"><img src="png/rdf-xml-48.png" alt="RDF/XML logo"></a>
+      <a href="png/turtle-48.png"><img src="png/turtle-48.png" alt="RDF/Turtle logo"></a>
+      <a href="png/n-triple-48.png"><img src="png/n-triple-48.png" alt="RDF N-Triples logo"></a>
+      <a href="png/rdfa-48.png"><img src="png/rdfa-48.png" alt="RDFa logo"></a>
+      <a href="png/sparql-48.png"><img src="png/sparql-48.png" alt="SPARQL logo"></a>
+      <a href="png/r2rml-48.png"><img src="png/r2rml-48.png" alt="R2RML logo"></a>
+      <a href="png/shacl-48.png"><img src="png/shacl-48.png" alt="SHACL logo"></a>
+    </p>
+
+    <h2>64x64 Pixel (PNG)</h2>
+    <p class=logos>
+      <a href="png/rdf-64.png"><img src="png/rdf-64.png" alt="Resource Description Format (RDF) logo"></a>
+      <a href="png/rdf-xml-64.png"><img src="png/rdf-xml-64.png" alt="RDF/XML logo"></a>
+      <a href="png/turtle-64.png"><img src="png/turtle-64.png" alt="RDF/Turtle logo"></a>
+      <a href="png/n-triple-64.png"><img src="png/n-triple-64.png" alt="RDF N-Triples logo"></a>
+      <a href="png/rdfa-64.png"><img src="png/rdfa-64.png" alt="RDFa logo"></a>
+      <a href="png/sparql-64.png"><img src="png/sparql-64.png" alt="SPARQL logo"></a>
+      <a href="png/r2rml-64.png"><img src="png/r2rml-64.png" alt="R2RML logo"></a>
+      <a href="png/shacl-64.png"><img src="png/shacl-64.png" alt="SHACL logo"></a>
+    </p>
+
+    <h2>96x96 Pixel (PNG)</h2>
+    <p class=logos>
+      <a href="png/rdf-96.png"><img src="png/rdf-96.png" alt="Resource Description Format (RDF) logo"></a>
+      <a href="png/rdf-xml-96.png"><img src="png/rdf-xml-96.png" alt="RDF/XML logo"></a>
+      <a href="png/turtle-96.png"><img src="png/turtle-96.png" alt="RDF/Turtle logo"></a>
+      <a href="png/n-triple-96.png"><img src="png/n-triple-96.png" alt="RDF N-Triples logo"></a>
+      <a href="png/rdfa-96.png"><img src="png/rdfa-96.png" alt="RDFa logo"></a>
+      <a href="png/sparql-96.png"><img src="png/sparql-96.png" alt="SPARQL logo"></a>
+      <a href="png/r2rml-96.png"><img src="png/r2rml-96.png" alt="R2RML logo"></a>
+      <a href="png/shacl-96.png"><img src="png/shacl-96.png" alt="SHACL logo"></a>
+    </p>
+
+    <h2>128x128 Pixel (PNG)</h2>
+    <p class=logos>
+      <a href="png/rdf-128.png"><img src="png/rdf-128.png" alt="Resource Description Format (RDF) logo"></a>
+      <a href="png/rdf-xml-128.png"><img src="png/rdf-xml-128.png" alt="RDF/XML logo"></a>
+      <a href="png/turtle-128.png"><img src="png/turtle-128.png" alt="RDF/Turtle logo"></a>
+      <a href="png/n-triple-128.png"><img src="png/n-triple-128.png" alt="RDF N-Triples logo"></a>
+      <a href="png/rdfa-128.png"><img src="png/rdfa-128.png" alt="RDFa logo"></a>
+      <a href="png/sparql-128.png"><img src="png/sparql-128.png" alt="SPARQL logo"></a>
+      <a href="png/r2rml-128.png"><img src="png/r2rml-128.png" alt="R2RML logo"></a>
+      <a href="png/shacl-128.png"><img src="png/shacl-128.png" alt="SHACL logo"></a>
+    </p>
+  
+    <h2>256x256 Pixel (PNG)</h2>
+    <p class=logos>
+      <a href="png/rdf-256.png"><img src="png/rdf-256.png" alt="Resource Description Format (RDF) logo"></a>
+      <a href="png/rdf-xml-256.png"><img src="png/rdf-xml-256.png" alt="RDF/XML logo"></a>
+      <a href="png/turtle-256.png"><img src="png/turtle-256.png" alt="RDF/Turtle logo"></a>
+      <a href="png/n-triple-256.png"><img src="png/n-triple-256.png" alt="RDF N-Triples logo"></a>
+      <a href="png/rdfa-256.png"><img src="png/rdfa-256.png" alt="RDFa logo"></a>
+      <a href="png/sparql-256.png"><img src="png/sparql-256.png" alt="SPARQL logo"></a>
+      <a href="png/r2rml-256.png"><img src="png/r2rml-256.png" alt="R2RML logo"></a>
+      <a href="png/shacl-256.png"><img src="png/shacl-256.png" alt="SHACL logo"></a>
     </p>
 
 <a href="https://github.com/cygri/rdf-logos"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
